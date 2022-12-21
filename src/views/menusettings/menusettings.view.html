@@ -1,0 +1,48 @@
+<div ng-if="realog === 'yes'">
+<div id="login" class="projects">
+    
+    <!-- Logo & Menu -->
+    <a class="title">Footer Settings</a>
+    <div class="meniu">
+        <div class="leftleft">
+            <a href="/dashboard">
+                <span class="material-icons">keyboard_backspace</span> Back
+            </a>
+        </div>
+        <div class="centiecentie"><a href="/dashboard" class="title">IN THE PARK ADMIN</a></div>
+    </div>
+        
+    <!-- App -->
+    <form>
+        <center><small>Footer Text</small></center>
+        <textarea rows="4" placeholder="Texto en Footer" ng-model="studioSettings.FooterText" ng-show="lang != 'eng'"></textarea>
+        <br><br>
+        <!-- Esp -->
+        <div ng-repeat="item in newMenuEsp" ng-show="lang != 'eng'">
+            <input ng-model="item.Name" ng-blur="newMenuEsp.$save(item)" type="text" placeholder="Nombre" spellcheck="false" >
+            <br>
+            <input ng-model="item.URL" ng-blur="newMenuEsp.$save(item)" type="text" placeholder="URL" spellcheck="false" >
+            <div style="text-align:right">
+                <span ng-click="DelEsp(item)" class="ngremove">Remove</span>
+            </div>
+        </div>
+        <div style="text-align:center;" ng-show="lang != 'eng'">
+            <div ng-click="newEsp()" class="bottom-add">
+                <span class="material-icons">add_circle</span>
+            </div>
+        </div>
+    </form>
+    <form>
+        <button id="btnLogin" type="submit" ng-click="studioSettings.$save()">Guardar</button>
+    </form>
+</div>
+<!-- Switch & Uploader -->
+<div class="onoffswitch">
+    <input ng-model="lang" ng-true-value="'eng'" ng-false-value="'esp'" type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+    <label class="onoffswitch-label" for="myonoffswitch">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div>
+    </div>
+    <div ng-if="realog != 'yes'" ng-init="tologin()"></div>

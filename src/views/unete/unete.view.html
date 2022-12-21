@@ -1,0 +1,407 @@
+<style>
+    input[type="radio"] {
+        -webkit-appearance: radio !important;
+    }
+    
+    .unete .module.left {
+        position: sticky;
+        top: 96px;
+    }
+    
+    .unete .module.left .title {
+        font-family: Calibre;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 61.04px;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: #000000;
+        margin-bottom: 30px;
+    }
+    
+    .unete .module.left .subtitle {
+        width: 75%;
+        font-family: Calibre;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 110%;
+        letter-spacing: 0.02em;
+        color: #000000;
+    }
+    
+    .unete .module.left .formtitle {
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 1px solid #e0e0e0;
+        font-family: Calibre;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        /* identical to box height, or 16px */
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+    
+    .unete .module.left .formtitle.noline {
+        border-top: 0px;
+    }
+    
+    .unete .form .row {
+        flex-wrap: wrap;
+        width: 100%;
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 8px;
+    }
+    
+    .unete .form input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #000;
+        padding: 8px 0px;
+        display: flex;
+        font-family: Calibre;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12.8px;
+        line-height: 120%;
+        /* or 15px */
+        text-transform: uppercase;
+    }
+    
+    .unete .form .row.one input {
+        width: 100%;
+    }
+    
+    .unete .form .row.two input {
+        width: calc(50% - 8px);
+    }
+    
+    .unete .form .row.three input {
+        width: calc(33.33% - 11px);
+    }
+    
+    .unete .form .row.text span {
+        width: 75%;
+        display: flex;
+        margin: 16px 0px;
+        font-family: Calibre;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12.8px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #000000;
+    }
+    
+    .unete .form .row.text div {
+        width: 75%;
+        display: flex;
+        font-family: Calibre;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12.8px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #000000;
+    }
+    
+    .unete .form .row.text div input {
+        vertical-align: middle;
+        display: inline-block;
+    }
+    
+    .unete .form .row.text div label {
+        margin-right: 16px;
+        margin-left: 4px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+    
+    .unete .module.right .subtitle {
+        width: 75%;
+        font-family: Calibre;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 110%;
+        letter-spacing: 0.02em;
+        color: #000000;
+        margin-bottom: 32px;
+    }
+    
+    .unete .module.right .subtitle span {
+        font-family: Calibre;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 16px;
+    }
+    
+    .unete .pics {
+        outline: none;
+        border: none;
+        padding: 8px 0px;
+        display: flex;
+        font-family: Calibre;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12.8px;
+        line-height: 120%;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        gap: 16px;
+    }
+    
+    .unete .pics div {
+        width: calc(50% - 8px);
+    }
+    
+    .unete .pics div>div>img {
+        opacity: 0;
+        pointer-events: none;
+        width: 100%;
+    }
+    
+    .unete .pics div>div {
+        width: 100%;
+    }
+    
+    .unete .pics div>span {
+        margin-top: 8px;
+        display: block;
+        font-family: Calibre;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12.8px;
+        line-height: 120%;
+        /* or 15px */
+        text-transform: uppercase;
+    }
+    
+    .bgplace {
+        background-color: #f2f2f2;
+        background-image: url(img/upup.svg);
+        background-position: center center;
+        background-size: 32px 32px;
+        background-repeat: no-repeat;
+    }
+    
+    #modules.unete .module {
+        width: 50%;
+        float: left;
+    }
+    
+    .pic-frente {
+        background-image: url(img/image38.png);
+        background-size: cover;
+    }
+    
+    .pic-completo {
+        background-image: url(img/image39.png);
+        background-size: cover;
+    }
+    
+    .pic-perfil {
+        background-image: url(img/image40.png);
+        background-size: cover;
+    }
+    
+    .ifpic {
+        background-size: cover;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .unete .module.left {
+            position: relative;
+            top: 0px;
+        }
+        #modules.unete .module {
+            width: 100%;
+            float: left;
+        }
+        .unete .module.left .title {
+            font-size: 48.83px;
+            line-height: 90%;
+        }
+        .unete .form .row.one input {
+            width: 100%;
+        }
+        .unete .form .row.two input {
+            width: 100%;
+        }
+        .unete .form .row.three input {
+            width: 100%;
+        }
+    }
+</style>
+
+<ng-include ng-controller="headerController" src="'header/header.view.html'"></ng-include>
+
+<style>
+    #Alerta {
+        display: block;
+        width: 100%;
+        height: 40px;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        background-color: red;
+        color: #fff;
+        display: none;
+        z-index: 10000;
+        line-height: 46px;
+        overflow: hidden;
+        text-align: center;
+    }
+</style>
+<div id="Alerta">Favor de llenar todos los campos</div>
+
+<div id="wrapper">
+    <div id="modules" class="unete">
+        <form ng-submit="newArt()">
+            <div class="module left">
+                <div class="title">Únete</div>
+                <div class="subtitle">¿Te gustaría formar parte del talento de In The Park? Da el primer paso llenando la forma que se presenta debajo. Te daremos una respuesta dentro de los 15 días siguientes.
+                </div>
+                <div class="formtitle">
+                    Datos Generales
+                </div>
+                <div class="form">
+                    <div class="row two">
+                        <input type="text" placeholder="Nombre" spellcheck="false" ng-model="pro.Name" required>
+                        <input type="text" placeholder="Apellido" spellcheck="false" ng-model="pro.LastName" required>
+                    </div>
+                    <div class="row three">
+                        <input type="text" placeholder="País" spellcheck="false" ng-model="pro.Country" required>
+                        <input type="text" placeholder="Estado" spellcheck="false" ng-model="pro.State" required>
+                        <input type="text" placeholder="Ciudad" spellcheck="false" ng-model="pro.City" required>
+                    </div>
+                    <div class="row three">
+                        <input type="text" placeholder="Email" spellcheck="false" ng-model="pro.Email" required>
+                        <input type="text" placeholder="Telefono" spellcheck="false" ng-model="pro.Phone" required>
+                        <input type="text" placeholder="Edad" spellcheck="false" ng-model="pro.Age" required>
+                    </div>
+                    <div class="row one">
+                        <style>
+                            .areadetexto {
+                                resize: none;
+                                font-family: Calibre;
+                                font-style: normal;
+                                font-weight: normal;
+                                font-size: 13px;
+                                line-height: 120%;
+                                width: 100%;
+                                margin-top: 7px;
+                                margin-bottom: 0px;
+                                height: 74px;
+                                padding: 10px 8px;
+                                box-sizing: border-box;
+                            }
+                        </style>
+                        <textarea class="areadetexto" rows="3" cols="50" placeholder="Cuéntanos más de ti" spellcheck="false" ng-model="pro.Hobbies">
+                    </textarea>
+                    </div>
+                    <div class="row two" ng-if="pro.Age > 4 && pro.Age < 18">
+                        <input type="text" placeholder="Nombre Tutor Legal" spellcheck="false" ng-model="pro.TutorName">
+                        <input type="text" placeholder="Apellido Tutor Legal" spellcheck="false" ng-model="pro.TutorLastName">
+                    </div>
+                    <div class="row two" ng-if="pro.Age > 4 && pro.Age < 18">
+                        <input type="text" placeholder="Correo Tutor Legal" spellcheck="false" ng-model="pro.TutorEmail">
+                        <input type="text" placeholder="Telefono Tutor Legal" spellcheck="false" ng-model="pro.TutorPhone">
+                    </div>
+                    <div class="row text">
+                        <span>¿Actualmente tienes contrato con alguna agencia o has tenido contratos en el pasado?</span>
+                        <div>
+                            <input type="radio" id="male" name="gender" value="male" spellcheck="false" ng-model="pro.Contracts" style="appearance: auto;">
+                            <label for="male" style="margin-top:2px">Si</label>
+                            <input type="radio" id="female" name="gender" value="female" spellcheck="false" ng-model="pro.Contracts" style="appearance: auto;">
+                            <label for="female" style="margin-top:2px">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="formtitle noline">
+                    Medidas
+                </div>
+                <div class="form">
+                    <div class="row three">
+                        <input type="text" placeholder="Altura" spellcheck="false" ng-model="pro.Height" required>
+                        <input type="text" placeholder="Cintura" spellcheck="false" ng-model="pro.Waist" required>
+                        <input type="text" placeholder="Cadera" spellcheck="false" ng-model="pro.Hip" required>
+                    </div>
+                </div>
+            </div>
+            <div class="module right nolnor">
+                <div class="subtitle">
+                    <span>
+                    Digitales
+                </span> Junto con tu solicitud envía 3 fotografías tuyas, con luz natural, sin retoques y que sean claras. Queremos conocerte, así que utiliza ropa que refleje tu estilo y forma de ser. Asegúrate de mirar directamente
+                    a la cámara, y enviar una imagen de tu perfil, una de lado y una de cuerpo completo, de la manera en que se muestra debajo. Las fotografías pueden ser hechas con un celular, no es necesario que sean profesionales.
+                </div>
+                <div class="pics">
+                    <div>
+                        <div class="bgplace pic-frente"><img src="img/Rectangle1.png"></div>
+                        <span>Frente</span>
+                    </div>
+                    <style>
+                        label.wfix {
+                            width: calc(50% - 8px);
+                        }
+                        
+                        label.wfix>div {
+                            width: 100% !important;
+                        }
+                    </style>
+                    <input type="file" id="thumb" placeholder="hola" style="display:none" custom-on-change="uThumbnail" required>
+                    <label for="thumb" class="wfix">
+                        <div>
+                            <div class="bgplace pic-place" id="frente"><img src="img/Rectangle1.png"></div>
+                        </div>
+                    </label>
+                </div>
+                <div class="pics">
+                    <div>
+                        <div class="bgplace pic-completo"><img src="img/Rectangle1.png"></div>
+                        <span>Cuerpo Completo</span>
+                    </div>
+                    <input type="file" id="thumbTwo" placeholder="hola" style="display:none" custom-on-change="uThumbnailTwo" required>
+                    <label for="thumbTwo" class="wfix">
+                        <div>
+                            <div class="bgplace pic-place" id="cuerpo"><img src="img/Rectangle1.png"></div>
+                        </div>
+                    </label>
+                </div>
+                <div class="pics">
+                    <div>
+                        <div class="bgplace pic-perfil"><img src="img/Rectangle1.png"></div>
+                        <span>Perfil</span>
+                    </div>
+                    <input type="file" id="thumbThree" placeholder="hola" style="display:none" custom-on-change="uHeader" required>
+                    <label for="thumbThree" class="wfix">
+                        <div>
+                            <div class="bgplace pic-place" id="perfil"><img src="img/Rectangle1.png"></div>
+                        </div>
+                    </label>
+                </div>
+                <!-- <div class="form-submit" ng-click="newArt()"></div> -->
+                <button class="form-submit" type="submit" style="border:none !important">Enviar Solicitud</button>
+
+
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<ng-include ng-controller="footerController" src="'footer/footer.view.html'"></ng-include>

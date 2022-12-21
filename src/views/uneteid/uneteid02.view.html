@@ -1,0 +1,45 @@
+<ng-include ng-controller="headerController" src="'header/header.view.html'"></ng-include>
+<title>{{metatags.title}}</title>
+  <meta name="description" content="{{metatags.description}}" >
+<div id="nswitch" class="{{nswitch.$value}}">
+    <img class="{{nswitch.$value}}" src="img/commies.svg"/>
+</div>
+<div id="blockie" class="{{Dsettings.loadedie}}">
+    <div class="modernloader {{Dsettings.loaded}}" style="background-color:#fafafa"></div>
+</div>
+
+<div id="wrapper">
+  <div id="modules" class="detail-cover">
+
+    <div class="top">
+      <div class="module m-02">
+        <div class="media">
+          <img src="{{theproject.Header}}">
+        </div>
+      </div>
+      <div class="module m-02">
+        <div class="data top">
+          <div class="date">{{theproject.dateday}} {{theproject.datemonth}} {{theproject.dateyear}}<span>Management</span></div>
+          <div class="title">{{theproject.Name}}</div>
+          <div class="subtitle" style="white-space: pre-line">{{theproject.Subtitle}}</div>
+          <div class="icons">
+              <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                <a class="a2a_button_facebook" style="margin-right: 16px;"><img src="img/SFacebook.svg" /></a>
+                <a class="a2a_button_twitter" style="margin-right: 16px;"><img src="img/STwitter.svg" /></a>
+                <a class="a2a_button_pinterest"><img src="img/SPinterest.svg" /></a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+ 
+
+  </div>
+  <ng-include ng-controller="relatedController" src="'related/related.view.html'"></ng-include>
+</div>
+
+
+
+<ng-include ng-controller="footerController" src="'footer/footer.view.html'"></ng-include>

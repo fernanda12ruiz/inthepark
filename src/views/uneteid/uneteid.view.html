@@ -1,0 +1,313 @@
+<div ng-if="realog === 'yes'">
+    <link rel="stylesheet" href="css/portfolio.css">
+<style>
+    body{
+        padding: 0px 10px;
+        margin-bottom: 0px;
+    }
+</style>
+<div id="login" class="projects">
+    <a href="/dashboard" class="title">Unete</a>
+    <div class="meniu">
+        <div class="leftleft">
+            <a href="/cccunete">
+                <span class="material-icons">keyboard_backspace</span> Back
+            </a>
+        </div>
+        <div class="centiecentie">IN THE PARK ADMIN</div>
+    </div>
+<div id="wrapper" style="padding-top: 0px;">
+    <div id="modules" class="unete" style="padding-top: 0px;">
+        <form>
+            <div class="module left" style="width:100%;">
+                <div class="form">
+                    <div class="formtitle noline">
+                        General
+                        </div>
+                <div class="row one">
+                    <div style="width:100%"><span>Nombre:</span><span>{{theproject.Name}}</span></div>
+                    <div style="width:100%"><span>Apellido:</span><span>{{theproject.LastName}}</span></div>
+                    <div style="width:100%"><span>País:</span><span>{{theproject.Country}}</span></div>
+                    <div style="width:100%"><span>Estado:</span><span>{{theproject.State}}</span></div>
+                    <div style="width:100%"><span>Ciudad:</span><span>{{theproject.City}}</span></div>
+                    <div style="width:100%"><span>Email:</span><span>{{theproject.Email}}</span></div>
+                    <div style="width:100%"><span>Telefono:</span><span>{{theproject.Phone}}</span></div>
+                    <div style="width:100%"><span>Edad:</span><span>{{theproject.Age}}</span></div>
+                    <div style="width:100%"><span>Sobre Ti:</span><br><span>{{theproject.Hobbies}}</span></div>
+                    <div ng-if="theproject.Age > 4 && theproject.Age < 18" style="width:100%"><span>Tutor:</span><br><span>{{theproject.TutorName}} {{theproject.TutorLastName}}</span></div>
+                    <div ng-if="theproject.Age > 4 && theproject.Age < 18" style="width:100%"><span>Tutor Email:</span><br><span>{{theproject.TutorEmail}}</span></div>
+                    <div ng-if="theproject.Age > 4 && theproject.Age < 18" style="width:100%"><span>Tutor Telefono:</span><br><span>{{theproject.TutorPhone}}</span></div>
+                    <div style="width:100%"><span>Actualmente o Previa Agencia:</span><br><span>{{theproject.Contract}}</span></div>
+                </div>
+                
+                
+                <div class="formtitle noline">
+                Medidas
+                </div>
+                <div class="form">
+                <div class="row one">
+                    <div style="width:100%"><span>Altura:</span><span>{{theproject.Height}}</span></div>
+                    <div style="width:100%"><span>Cintura:</span><span>{{theproject.Waist}}</span></div>
+                    <div style="width:100%"><span>Cadera:</span><span>{{theproject.Hip}}</span></div><br><br>
+                </div>
+                </div>
+                <img style="width: 100%" src="{{theproject.Thumbnail}}">
+                <img style="width: 100%" src="{{theproject.ThumbnailTwo}}">
+                <img style="width: 100%" src="{{theproject.Header}}">
+            </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+        </div>
+
+    </div>
+
+<div ng-if="realog != 'yes'" ng-init="tologin()"></div>
+
+
+
+
+<style>
+
+.unete .module.left{
+    position: sticky;
+    top: 96px;
+}
+.unete .module.left .title{
+    font-family: Calibre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 61.04px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 30px;
+}
+.unete .module.left .subtitle{
+    width: 75%;
+    font-family: Calibre;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+.unete .module.left .formtitle{
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0;
+    font-family: Calibre;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    /* identical to box height, or 16px */
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.unete .module.left .formtitle.noline{
+    border-top: 0px;
+}
+.unete .form .row{
+    flex-wrap: wrap;
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 8px;
+}
+.unete .form input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 8px 0px;
+    display: flex;
+    font-family: Calibre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12.8px;
+    line-height: 120%;
+    /* or 15px */
+
+    text-transform: uppercase;
+}
+.unete .form .row.one input{
+    width: 100%;
+}
+.unete .form .row.two input{
+    width: calc(50% - 8px);
+}
+.unete .form .row.three input{
+    width: calc(33.33% - 11px);
+}
+.unete .form .row.text span{
+    width: 75%;
+    display: flex;
+    margin: 16px 0px;
+    font-family: Calibre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12.8px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #000000;
+}
+.unete .form .row.text div{
+    width: 75%;
+    display: flex;
+    font-family: Calibre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12.8px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #000000;
+}
+.unete .form .row.text div input{
+    vertical-align: middle;
+    display: inline-block;
+}
+.unete .form .row.text div label{
+    margin-right: 16px;
+    margin-left: 4px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.unete .module.right .subtitle{
+    width: 75%;
+    font-family: Calibre;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    margin-bottom: 32px;
+}
+.unete .module.right .subtitle span{
+    font-family: Calibre;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 16px;
+}
+.unete .pics{
+    outline: none;
+    border: none;
+    padding: 8px 0px;
+    display: flex;
+    font-family: Calibre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12.8px;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    gap: 16px;
+}
+.unete .pics div{
+    width: calc(50% - 8px);
+    
+}
+.unete .pics div>div>img{
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+}
+.unete .pics div>div{
+    width: 100%;
+}
+.unete .pics div>span{
+    margin-top: 8px;
+    display: block;
+    font-family: Calibre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12.8px;
+    line-height: 120%;
+    /* or 15px */
+
+    text-transform: uppercase;
+}
+
+.bgplace{
+    background-color: #f2f2f2;
+    background-image: url(img/upup.svg);
+    background-position: center center;
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+}
+
+
+
+#modules.unete .module {
+    width: 50%;
+    float: left;
+}
+
+.pic-frente{
+    background-image: url(img/image38.png);
+    background-size: cover;
+}
+.pic-completo{
+    background-image: url(img/image39.png);
+    background-size: cover;
+}
+.pic-perfil{
+    background-image: url(img/image40.png);
+    background-size: cover;
+}
+.ifpic{
+    background-size: cover;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+
+    .unete .module.left{
+        position: relative;
+        top: 0px;
+    }
+
+    #modules.unete .module {
+        width: 100%;
+        float: left;
+    }
+
+    .unete .module.left .title{
+        font-size: 48.83px;
+        line-height: 90%;
+    }
+
+    .unete .form .row.one input{
+    width: 100%;
+}
+    .unete .form .row.two input{
+        width: 100%;
+    }
+    .unete .form .row.three input{
+        width: 100%;
+    }
+
+}
+
+
+
+
+</style>
+
