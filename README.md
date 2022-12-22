@@ -55,5 +55,4 @@ NEW RUN
 
 Bugs pendientes de arreglar:
 1. Las flechas para reacomodar a los modelos en la sección de Talento en el CMS no funcionan bien
-2. El buscador cuando arroja resultados, los thumbnails no tienen link al artículo correspondiente
-3. El botón de "Submit" en el formulario de la sección "Únete" no funciona, lo que impide que los submissions lleguen a la base de datos.
+2. El botón de "Submit" en el formulario de la sección "Únete" no funciona, lo que impide que los submissions lleguen a la base de datos.
